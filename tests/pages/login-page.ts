@@ -25,7 +25,7 @@ export class LoginPage extends BasePage {
   async signIn(username: string, password: string) {
     await this.usernameField.fill(username)
     await this.passwordField.fill(password)
-    await this.signInButton.click({force: true})
+    await this.signInButton.click({ force: true })
     return new OrderPage(this.page)
   }
 

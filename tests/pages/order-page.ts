@@ -8,7 +8,6 @@ export class OrderPage extends AuthPage {
   readonly orderCreatorComment: Locator
   readonly createOrderButton: Locator
 
-
   constructor(page: Page) {
     super(page)
     this.statusButton = page.getByTestId('openStatusPopup-button')

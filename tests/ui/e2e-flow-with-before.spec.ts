@@ -28,7 +28,6 @@ test('login with correct credentials and verify order creation page', async ({})
   await expect.soft(orderCreationPage.orderCreatorPhone).toBeVisible()
   await expect.soft(orderCreationPage.orderCreatorComment).toBeVisible()
   await expect.soft(orderCreationPage.createOrderButton).toBeVisible()
-
 })
 
 test('login and create order', async ({}) => {
@@ -40,7 +39,7 @@ test('login and create order', async ({}) => {
   await expect.soft(orderCreationPage.searchPopUp).toBeVisible()
 })
 
-test('login and create order and show status', async ({page}) => {
+test('login and create order and show status', async ({ page }) => {
   const orderCreationPage = await authPage.signIn(USERNAME, PASSWORD)
   await orderCreationPage.statusButton.click()
   await orderCreationPage.searchPopUpInputField.fill('3602')
@@ -50,6 +49,3 @@ test('login and create order and show status', async ({page}) => {
 })
 
 //  проблемы с webkit уже не первый раз...(остальное работает)
-
-
-

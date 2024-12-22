@@ -17,9 +17,8 @@ export abstract class BasePage {
     this.privacyPolicyLink = page.getByTestId('privacy-policy')
     this.privacyCookieLink = page.getByTestId('cookie-policy')
     this.termsOfServiceLink = page.getByTestId('terms-of-service')
-    this.langEnButton = page.getByRole('button', {name: 'EN'})
-    this.langRuButton = page.getByRole('button', {name: 'RU'})
-
+    this.langEnButton = page.getByRole('button', { name: 'EN' })
+    this.langRuButton = page.getByRole('button', { name: 'RU' })
   }
 
   async checkElementVisibility(element: Locator): Promise<void> {

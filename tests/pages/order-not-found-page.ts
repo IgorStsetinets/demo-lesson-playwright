@@ -6,10 +6,9 @@ export class OrderNotFoundPage extends AuthPage {
   readonly logoutButton: Locator
   readonly notFoundDescription: Locator
 
-
   constructor(page: Page) {
     super(page)
-    this.notFoundTitle = page.getByRole('heading', {name: 'Order not found'})
+    this.notFoundTitle = page.getByRole('heading', { name: 'Order not found' })
     this.logoutButton = page.getByTestId('logout-button')
     this.notFoundDescription = page.getByText('Check the tracking code')
   }
