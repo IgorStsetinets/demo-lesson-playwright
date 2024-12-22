@@ -1,12 +1,20 @@
 import { Locator, Page } from '@playwright/test'
+import { AuthPage } from './auth-page'
 
-export class OrderPage {
-  readonly page: Page
+export class OrderPage extends AuthPage {
   readonly statusButton: Locator
-  // add more locators here
+  readonly orderCreatorName: Locator
+  readonly orderCreatorPhone: Locator
+  readonly orderCreatorComment: Locator
+  readonly createOrderButton: Locator
+
 
   constructor(page: Page) {
-    this.page = page
+    super(page)
     this.statusButton = page.getByTestId('openStatusPopup-button')
+    this.orderCreatorName = page.getByTestId('username-input')
+    this.orderCreatorPhone = page.getByTestId('phone-input')
+    this.orderCreatorComment = page.getByTestId('comment-input')
+    this.createOrderButton = page.getByTestId('createOrder-button')
   }
 }
